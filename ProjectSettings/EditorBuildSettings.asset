@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/HeadphoneMotion/Example/Scenes/HeadphoneMotionExample.unity
+    guid: 47f2d13c6e6654d47a2a038695496755
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 74b933650f477204f9994c4766dfad7b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 48adfa3218026ea4596fdea8f6138427, type: 2}

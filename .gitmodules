@@ -1,0 +1,3 @@
+[submodule "Assets/HeadphoneMotion"]
+	path = Assets/HeadphoneMotion
+	url = git@github.com:anastasiadevana/HeadphoneMotion.git

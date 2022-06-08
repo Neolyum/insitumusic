@@ -1,5 +1,5 @@
 using UnityEngine;
-using Valve.VR;
+//using Valve.VR;
 public class Controls : MonoBehaviour
 {
     private bool gyroEnabled;
@@ -10,24 +10,24 @@ public class Controls : MonoBehaviour
 
     private GUIStyle style;
 
-       private Vector2 trackpad;
-    private Vector3 moveDirection;
-    private int GroundCount;
+    //private Vector2 trackpad;
+    //private Vector3 moveDirection;
+    //private int GroundCount;
     private CapsuleCollider CapCollider;
 
-    public SteamVR_Input_Sources MovementHand;//Set Hand To Get Input From
-    public SteamVR_Action_Vector2 TrackpadAction;
-    public SteamVR_Action_Boolean JumpAction;
-    public float jumpHeight;
-    public float MovementSpeed;
-    public float Deadzone;//the Deadzone of the trackpad. used to prevent unwanted walking.
-    public GameObject Head;
-    public GameObject AxisHand;//Hand Controller GameObject
-    public PhysicMaterial NoFrictionMaterial;
-    public PhysicMaterial FrictionMaterial;
+    //public SteamVR_Input_Sources MovementHand;//Set Hand To Get Input From
+    //public SteamVR_Action_Vector2 TrackpadAction;
+    //public SteamVR_Action_Boolean JumpAction;
+    //public float jumpHeight;
+    //public float MovementSpeed;
+    //public float Deadzone;//the Deadzone of the trackpad. used to prevent unwanted walking.
+    //public GameObject Head;
+    //public GameObject AxisHand;//Hand Controller GameObject
+    //public PhysicMaterial NoFrictionMaterial;
+    //public PhysicMaterial FrictionMaterial;
  
 
-    void MovementUpdate()
+    /*void MovementUpdate()
     {
         updateInput();
         updateCollider();
@@ -38,7 +38,7 @@ public class Controls : MonoBehaviour
         {//make sure the touch isn't in the deadzone and we aren't going to fast.
             CapCollider.material = NoFrictionMaterial;
             velocity = moveDirection;
-            if (JumpAction.GetStateDown(MovementHand) && GroundCount > 0)
+            if (false /*JumpAction.GetStateDown(MovementHand) && GroundCount > 0*//*)
             {
                 float jumpSpeed = Mathf.Sqrt(2 * jumpHeight * 9.81f);
                 RBody.AddForce(0, jumpSpeed, 0, ForceMode.VelocityChange);
@@ -74,7 +74,7 @@ public class Controls : MonoBehaviour
 
     private void updateInput()
     {
-        trackpad = TrackpadAction.GetAxis(MovementHand);
+        //trackpad = TrackpadAction.GetAxis(MovementHand);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -84,7 +84,7 @@ public class Controls : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         GroundCount--;
-    }
+    }*/
     private void Start () 
     {
         CapCollider = GetComponent<CapsuleCollider>();
@@ -113,7 +113,7 @@ public class Controls : MonoBehaviour
 
     private void Update () 
     {
-        MovementUpdate();
+        //MovementUpdate();
         if (gyroEnabled) 
         {
             if (Input.touchCount == 3) 
